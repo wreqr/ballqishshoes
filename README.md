@@ -10,7 +10,7 @@ Melayani penjualan grosir (toko/instansi) dan eceran dengan jaminan sol TPR empu
 
 1. **[index.html](index.html)** — Profil Home Industri & Video Summary Pembuatan Sepatu Pantofel (tanpa musik).
 2. **[lokasi.html](lokasi.html)** — Peta Workshop & Home Industri via Google Maps (Rating 4.9★) dengan rute navigasi.
-3. **[katalog.html](katalog.html)** — Menu Katalog 6 Model Sepatu Pantofel Pilihan (Grosir & Eceran).
+3. **[katalog.html](katalog.html)** — Katalog 6 Model Sepatu Pantofel Pilihan (Grosir & Eceran).
 4. **[produk-detail.html](produk-detail.html)** — Halaman detail produk interaktif (galeri foto zoom, panduan ukuran, spesifikasi lengkap, dan tombol pemesanan WhatsApp langsung).
 
 ---

@@ -369,8 +369,8 @@
           </div>
 
           <!-- Pilihan Jumlah & Tombol Pesan Langsung via WhatsApp Owner -->
-          <div style="display: flex; align-items: center; gap: 14px; margin-top: 10px;">
-            <div style="display: inline-flex; align-items: center; border: 1px solid var(--border-strong); border-radius: var(--radius-sm); background-color: #fff; height: 50px;">
+          <div class="order-action-row">
+            <div class="qty-stepper">
               <button type="button" id="btn-qty-minus" style="width: 40px; height: 100%; font-size: 18px; font-weight: 700; color: var(--ink);">&minus;</button>
               <span id="qty-display" style="width: 44px; text-align: center; font-weight: 800; font-size: 15px;">1</span>
               <button type="button" id="btn-qty-plus" style="width: 40px; height: 100%; font-size: 18px; font-weight: 700; color: var(--ink);">+</button>
@@ -386,7 +386,7 @@
 
           <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
             <a href="katalog.html" class="nav-hyperlink" style="border: 1px solid var(--border-strong);">
-              &larr; Kembali ke Menu 6 Produk
+              &larr; Kembali ke Katalog Sepatu
             </a>
             <a href="lokasi.html" class="nav-hyperlink" style="border: 1px solid var(--border-strong);">
               Lihat Peta Workshop Sidoarjo &rarr;
@@ -482,16 +482,23 @@ Mohon konfirmasi ketersediaan stok di workshop Seruni Gedangan Sidoarjo dan rinc
     function openDrawer() {
       if (drawer) drawer.classList.add('active');
       if (backdrop) backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
     }
 
     function closeDrawer() {
       if (drawer) drawer.classList.remove('active');
       if (backdrop) backdrop.classList.remove('active');
+      document.body.style.overflow = '';
     }
 
     if (btnToggle) btnToggle.addEventListener('click', openDrawer);
     if (btnClose) btnClose.addEventListener('click', closeDrawer);
     if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+    // Escape key listener for accessibility
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDrawer();
+    });
   }
 
   // --- ENSURE VIDEO IS MUTED ON START ---

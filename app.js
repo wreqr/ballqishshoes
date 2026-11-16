@@ -205,11 +205,18 @@
   }
 
   // --- RENDER 6 PRODUK DI HALAMAN KATALOG.HTML ---
-  function render6ProductsCatalog() {
+  function render6ProductsCatalog(filter = 'all') {
     const grid = document.getElementById('catalog-10-grid') || document.getElementById('catalog-grid');
     if (!grid) return;
 
-    grid.innerHTML = PRODUCTS.map(p => `
+    let items = PRODUCTS;
+    if (filter === 'slip-on') {
+      items = PRODUCTS.filter(p => p.category.toLowerCase().includes('slip-on'));
+    } else if (filter === 'lace-monk') {
+      items = PRODUCTS.filter(p => p.category.toLowerCase().includes('bertali') || p.category.toLowerCase().includes('monkstrap'));
+    }
+
+    grid.innerHTML = items.map(p => `
       <article class="catalog-card-10">
         <div class="card-10-media">
           <img 
@@ -245,6 +252,22 @@
     `).join('');
   }
 
+  // --- INTERACTIVE FILTER PILLS UNTUK KATALOG.HTML ---
+  function initCatalogFilters() {
+    const filterContainer = document.getElementById('catalog-filters');
+    if (!filterContainer) return;
+
+    const filterBtns = filterContainer.querySelectorAll('.catalog-filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filterVal = btn.getAttribute('data-filter') || 'all';
+        render6ProductsCatalog(filterVal);
+      });
+    });
+  }
+
   // --- RENDER DETAIL PRODUK DI HALAMAN PRODUK-DETAIL.HTML ---
   function renderSingleProductDetail() {
     const container = document.getElementById('single-product-container');
@@ -257,6 +280,12 @@
 
     // Update document title
     document.title = `${product.name} - Ballqish Sepatu Sidoarjo`;
+
+    // Update semantic breadcrumb name
+    const breadcrumbProduct = document.getElementById('breadcrumb-product-name');
+    if (breadcrumbProduct) {
+      breadcrumbProduct.textContent = product.name;
+    }
 
     // State pilihan ukuran & quantity
     let selectedSize = product.sizes[0];
@@ -515,6 +544,7 @@ Mohon konfirmasi ketersediaan stok di workshop Seruni Gedangan Sidoarjo dan rinc
     initMobileDrawer();
     initVideoControl();
     render6ProductsCatalog();
+    initCatalogFilters();
     renderSingleProductDetail();
 
     // Sticky header shadow

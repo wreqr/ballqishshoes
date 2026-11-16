@@ -52,6 +52,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+ul, ol {
+  list-style: none;
+}
+
 html {
   font-family: var(--font-sans);
   background-color: var(--bg-page);
@@ -454,7 +458,7 @@ a {
 
 /* Breadcrumb Bar */
 .breadcrumb-bar {
-  padding: 14px 0;
+  padding: 12px 0;
   background-color: #ffffff;
   border-bottom: 1px solid var(--border);
   font-size: 12px;
@@ -464,22 +468,97 @@ a {
 .breadcrumb-list {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.breadcrumb-list a:hover {
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+
+.breadcrumb-item a {
+  color: var(--ink-secondary);
+  transition: color 0.2s;
+}
+
+.breadcrumb-item a:hover {
   color: var(--ballqish-red);
   text-decoration: underline;
 }
 
-.breadcrumb-separator {
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "›";
+  margin-right: 6px;
   color: var(--ink-faint);
+  font-size: 14px;
+  line-height: 1;
 }
 
-.breadcrumb-current {
+.breadcrumb-item[aria-current="page"] {
   color: var(--ink);
   font-weight: 600;
+}
+
+.size-table-container {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  margin-top: 14px;
+}
+
+.size-table-container table {
+  min-width: 620px;
+  width: 100%;
+}
+
+/* Catalog Filter Pills */
+.catalog-filters-bar {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.catalog-filter-btn {
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 11.5px;
+  font-weight: 600;
+  border: 1px solid var(--border-strong);
+  background-color: #ffffff;
+  color: var(--ink);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.catalog-filter-btn:hover {
+  border-color: var(--ballqish-red);
+  color: var(--ballqish-red);
+}
+
+.catalog-filter-btn.active {
+  background-color: var(--ballqish-red);
+  border-color: var(--ballqish-red);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(237, 32, 36, 0.25);
+}
+
+@media (max-width: 480px) {
+  .catalog-filter-btn {
+    padding: 6px 12px;
+    font-size: 10.5px;
+  }
 }
 
 /* Page Intro Header */

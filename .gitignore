@@ -1,0 +1,17 @@
+# OS Metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Editor & IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Log & Temp
+*.log
+*.tmp
+*.bak

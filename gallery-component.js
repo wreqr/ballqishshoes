@@ -101,13 +101,19 @@
               <img
                 src="${imgObj.src}"
                 alt="${imgObj.alt}"
-                width="1080"
-                height="720"
+                width="960"
+                height="640"
                 loading="lazy"
                 decoding="async">
             </button>
           `).join('')}
         </div>
+        ${gallery.length > 5 ? `
+          <div style="font-size: 11.5px; color: var(--ink-muted); display: flex; justify-content: space-between; align-items: center; padding: 0 2px;">
+            <span>← Geser deretan foto di atas untuk lihat sudut lainnya →</span>
+            <strong style="color: var(--ballqish-red);">${gallery.length} Foto</strong>
+          </div>
+        ` : ''}
       </div>
     `;
   }

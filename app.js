@@ -32,13 +32,13 @@
         "foto produk/model-01/foto-3.jpg",
         "foto produk/model-01/foto-4.jpg"
       ],
-      description: "Model pantofel slip-on paling legendaris dari Ballqish. Menjadi pilihan utama ribuan guru, pegawai negeri sipil (PNS), dan karyawan kantor di Jawa Timur karena sol TPR-nya yang luar biasa empuk dan nyaman untuk berdiri mengajar atau berjalan seharian.",
+      description: "Model pantofel slip-on paling legendaris dari Ballqish. Menjadi pilihan utama guru, dosen, pegawai negeri sipil (PNS), dan karyawan kantor karena outsole elastis anti-slip yang empuk dan nyaman untuk berdiri mengajar atau berjalan seharian.",
       specs: [
-        "Material: Kulit Sintetis PU Premium (Lentur, Tidak Mudah Retak/Pecah)",
-        "Outsole: Thermo Plastic Rubber (TPR) Anti-Slip & Tidak Berdecit di Keramik",
-        "Insole: Busa Eva Foam Berpori Ergonomis Peredam Benturan Tumit",
+        "Material: Kulit Sintetis PU Premium Grade A (Lentur, Tidak Mudah Retak/Pecah)",
+        "Outsole: Elastis Anti-Slip & Tidak Berdecit di Keramik (variasi sol fleksibel sesuai kebutuhan)",
+        "Insole: Busa Berpori Ergonomis Peredam Benturan Tumit",
         "Tinggi Hak: 2.5 cm (Kemiringan anatomis ideal tanpa beban betis)",
-        "Konstruksi: Jahitan Tangan Presisi Pengrajin Desa Sruni, Sidoarjo"
+        "Konstruksi: Perakitan Presisi dengan Lem Khusus Berdaya Rekat Tinggi (Pengrajin Desa Sruni, Sidoarjo)"
       ],
       sizes: ["38", "39", "40", "41", "42", "43", "44", "45"]
     },
@@ -65,11 +65,11 @@
       ],
       description: "Menghadirkan finishing doff hitam matte yang tenang, elegan, dan berwibawa. Dilengkapi hidden elastic gusset di samping yang memudahkan Anda melepas dan memasang sepatu dengan cepat.",
       specs: [
-        "Material: PU Leather Matte Finish Tahan Gesekan",
-        "Outsole: Sol Karet TPR Doff Solid Anti-Licin",
-        "Insole: Double Cushion Arch Support",
+        "Material: PU Leather Premium Grade A Matte Finish Tahan Gesekan",
+        "Outsole: Outsole Elastis Doff Solid Anti-Licin (tersedia pilihan variasi outsole)",
+        "Insole: Bantalan Busa Berpori Ergonomis Anti-Lelah",
         "Grip: Pola Alur Grip Multi-Directional di Bawah Sol",
-        "Kesesuaian: Sangat cocok untuk mobilitas kerja harian kantor & dinas"
+        "Konstruksi: Perakitan Presisi Lem Khusus Daya Rekat Tinggi untuk mobilitas harian"
       ],
       sizes: ["39", "40", "41", "42", "43", "44"]
     },
@@ -96,9 +96,9 @@
       ],
       description: "Siluet pantofel bertali klasik dengan 4 pasang eyelets kokoh. Pilihan sempurna untuk upacara formal kenegaraan, sidang kelulusan skripsi sarjana, wisuda, maupun pelantikan dinas.",
       specs: [
-        "Material: Kulit Sintetis Kilap Halus Formal",
+        "Material: Kulit Sintetis PU Premium Grade A Kilap Halus Formal",
         "Tali: Waxed Cotton Laces Tahan Putus & Rapi",
-        "Outsole: Sol TPR Solid dengan Jahitan Keliling Tepi Sol",
+        "Outsole: Outsole Elastis Anti-Slip dengan Perakitan Lem Khusus Daya Rekat Tinggi",
         "Tinggi Hak: 3 cm Berwibawa",
         "Kenyamanan: Bagian kerah tumit dilapisi busa empuk anti-lecet"
       ],
@@ -125,13 +125,13 @@
         "foto produk/model-04/foto-3.jpg",
         "foto produk/model-04/foto-4.jpg"
       ],
-      description: "Gaya bespoke Eropa yang memadukan dua gesper logam anti-karat dengan kepraktisan slip-on. Menjadikan Anda tampil beda dan menjadi pusat perhatian di setiap acara formal.",
+      description: "Gaya Eropa yang memadukan dua gesper logam anti-karat dengan kepraktisan slip-on. Tampil modern, tegas, dan berwibawa di setiap acara formal.",
       specs: [
         "Gesper: Double Buckle Alloy Logam Anti-Karat",
         "Material: PU Leather Premium Grade A",
-        "Outsole: TPR Elastis Anti-Slip",
-        "Insole: Busa Memory Foam 5mm Empuk",
-        "Karakter: Bold, Modern & Aristokrat"
+        "Outsole: Outsole Elastis Anti-Slip (fleksibel sesuai pilihan kebutuhan)",
+        "Insole: Bantalan Busa Berpori Ergonomis Empuk",
+        "Karakter: Modern, Tegas & Berwibawa"
       ],
       sizes: ["39", "40", "41", "42", "43"]
     },
@@ -156,13 +156,13 @@
         "foto produk/model-05/foto-3.jpg",
         "foto produk/model-05/foto-4.jpg"
       ],
-      description: "Mahakarya seni kerajinan tangan pengrajin Sidoarjo dengan aksen perforasi ukir Wingtip Medallion di bagian toe cap. Tampilan bangsawan yang sangat menawan untuk pesta dan resepsi.",
+      description: "Karya ketelitian pengrajin Sidoarjo dengan aksen perforasi ukir Wingtip Medallion di bagian toe cap. Tampilan elegan dan berkelas untuk acara resmi, pesta, maupun resepsi.",
       specs: [
         "Aksen: Perforasi Medallion Handmade Presisi",
-        "Material: Kulit Sintetis Kilau Mewah",
-        "Outsole: Sol TPR Premium Tahan Aus",
+        "Material: Kulit Sintetis PU Premium Grade A Kilau Halus",
+        "Outsole: Outsole Elastis Anti-Slip Tahan Aus (tersedia pilihan variasi sol)",
         "Tali: Lilin Waxed Berkualitas Tinggi",
-        "Finishing: Edge Polished Halus"
+        "Konstruksi: Perakitan Presisi Lem Khusus Daya Rekat Tinggi"
       ],
       sizes: ["39", "40", "41", "42", "43", "44"]
     },
@@ -190,9 +190,9 @@
       description: "Varian warna cokelat mocca bernuansa klasik hangat. Sangat serasi dipadukan dengan celana chino cokelat/krem, seragam dinas PDH cokelat pemda, maupun kemeja batik.",
       specs: [
         "Warna: Mocca Earth Tone Elegan",
-        "Material: Kulit Sintetis Lentur Lembut",
-        "Outsole: TPR Warna Hitam Solid Anti-Licin",
-        "Insole: Busa Eva Lembut",
+        "Material: Kulit Sintetis PU Premium Grade A Lentur Lembut",
+        "Outsole: Outsole Elastis Hitam Solid Anti-Licin",
+        "Insole: Busa Berpori Ergonomis Lembut",
         "Perawatan: Cukup dilap kain basah atau semir netral"
       ],
       sizes: ["38", "39", "40", "41", "42", "43"]
@@ -237,20 +237,21 @@
             <span style="font-size: 10px; color: var(--ink-muted); font-weight: 600;">Model ${p.number}</span>
           </div>
           <h3 class="card-10-title"><a href="produk-detail.html?id=${p.id}">${p.name}</a></h3>
-          <p class="card-10-desc">${p.description}</p>
-          
-          <div class="card-10-pricing">
-            <span class="card-price-main">${formatRupiah(p.price)}</span>
-            <span class="card-price-strike">${formatRupiah(p.originalPrice)}</span>
-          </div>
 
-          <div style="font-size: 11px; color: var(--ballqish-red); font-weight: 700; margin-bottom: 14px;">
-            Grosir 12+: ${formatRupiah(p.wholesalePrice)} / psg
-          </div>
+          <div class="card-10-footer mt-auto">
+            <div class="card-10-pricing">
+              <span class="card-price-main">${formatRupiah(p.price)}</span>
+              <span class="card-price-strike">${formatRupiah(p.originalPrice)}</span>
+            </div>
 
-          <a href="produk-detail.html?id=${p.id}" class="card-10-btn">
-            Lihat Detail & Pesan &rarr;
-          </a>
+            <div style="font-size: 11px; color: var(--ballqish-red); font-weight: 700; margin-bottom: 14px;">
+              Grosir 12+: ${formatRupiah(p.wholesalePrice)} / psg
+            </div>
+
+            <a href="produk-detail.html?id=${p.id}" class="card-10-btn">
+              Lihat Detail & Pesan &rarr;
+            </a>
+          </div>
         </div>
       </article>
     `).join('');
@@ -331,9 +332,9 @@
               🛡️ Kualitas Resmi Ballqish Sidoarjo:
             </h4>
             <ul style="font-size: 12.5px; color: var(--ink-secondary); line-height: 1.6; list-style: disc; padding-left: 18px;">
-              <li>100% produksi langsung dari pengrajin lokal Desa Seruni, Gedangan (Tangan Pertama).</li>
-              <li>Bahan kulit sintetis PU premium lentur, kuat, dan tidak mudah retak.</li>
-              <li>Dus box kemasan tebal tahan banting untuk pengiriman ke seluruh Indonesia.</li>
+              <li>100% produksi langsung dari pengrajin lokal Desa Sruni, Gedangan sejak 2002 (Tangan Pertama).</li>
+              <li>Bahan kulit sintetis PU Premium Grade A lentur, kuat, dan tidak mudah retak.</li>
+              <li>Pilihan jenis outsole & material fleksibel sesuai kebutuhan dan anggaran.</li>
             </ul>
           </div>
         </div>
@@ -355,7 +356,7 @@
           <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; margin-bottom: 12px;">
             <span style="color: #f59e0b; letter-spacing: 1px;">★★★★★</span>
             <span style="font-weight: 700;">${product.rating}</span>
-            <span style="color: var(--ink-muted);">(${product.reviewsCount} Ulasan Puas Pelanggan)</span>
+            <span style="color: var(--ink-muted);">(Rating Pelanggan Google Maps & Shopee)</span>
           </div>
 
           <div class="detail-price-box">
@@ -474,7 +475,7 @@ Saya tertarik untuk memesan sepatu pantofel berikut:
 • *Harga Satuan:* ${formatRupiah(unitPrice)} ${isWholesale ? '(Harga Grosir)' : ''}
 • *Total Biaya:* ${formatRupiah(totalPrice)}
 
-Mohon konfirmasi ketersediaan stok di workshop Seruni Gedangan Sidoarjo dan rincian pembayaran. Terima kasih!`
+Mohon konfirmasi ketersediaan stok di workshop Desa Sruni, Gedangan, Sidoarjo dan rincian pembayaran. Terima kasih!`
       );
 
       window.open(`https://wa.me/6289616067647?text=${text}`, '_blank', 'noopener,noreferrer');

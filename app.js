@@ -303,7 +303,7 @@
 
           <h1 class="detail-title">${product.name}</h1>
 
-          <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; margin-bottom: 12px;">
+          <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 4px 6px; font-size: 13px; margin-bottom: 12px;">
             <span style="color: #f59e0b; letter-spacing: 1px;">★★★★★</span>
             <span style="font-weight: 700;">${product.rating}</span>
             <span style="color: var(--ink-muted);">(Rating Pelanggan Google Maps & Shopee)</span>

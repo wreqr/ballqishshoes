@@ -1,13 +1,12 @@
 /* ==========================================================================
    DATA PRODUK TERPUSAT - BALLQISH SHOES SIDOARJO (11 MODEL AKTIF)
    ==========================================================================
-   CARA MENAMBAH / MENGEDIT MODEL SEPATU:
-   1. Simpan foto yang sudah dikompresi di folder "assets/katalog/<KODE>/":
-      foto-1.jpg (utama), foto-2.jpg, foto-3.jpg, foto-4.jpg.
-   2. Ubah harga (price, originalPrice, wholesalePrice), ukuran (sizes), atau
-      salin salah satu blok { ... } di bawah ini untuk menambah model baru.
-   3. Simpan file ini — halaman katalog.html dan produk-detail.html otomatis
-      menyesuaikan jumlah kartu, pencarian, dan detail tanpa edit HTML!
+   Struktur galeri setiap produk menggunakan Array of Objects:
+   gallery: [
+     { id: 1, src: '/images/model-g38/G03.1.jpg', alt: 'Ballqish G03 - Foto 1' },
+     ...
+   ]
+   Tanpa dummy SVG — langsung mengarah ke path file gambar lokal Anda.
    ========================================================================== */
 
 window.BALLQISH_PRODUCTS = [
@@ -22,14 +21,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 65000,
     badge: "Pilihan Utama",
     rating: "4.9",
-    folder: "assets/katalog/G03",
-    image: "assets/katalog/G03/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-01.svg",
+    image: "/images/model-g38/G03.1.jpg",
     gallery: [
-      "assets/katalog/G03/foto-1.jpg",
-      "assets/katalog/G03/foto-2.jpg",
-      "assets/katalog/G03/foto-3.jpg",
-      "assets/katalog/G03/foto-4.jpg"
+      { id: 1, src: "/images/model-g38/G03.1.jpg", alt: "Ballqish G03 - Foto 1" },
+      { id: 2, src: "/images/model-g38/G03.13.jpg", alt: "Ballqish G03 - Foto 2" },
+      { id: 3, src: "/images/model-g38/G03.14.jpg", alt: "Ballqish G03 - Foto 3" },
+      { id: 4, src: "/images/model-g38/G03.22.jpg", alt: "Ballqish G03 - Foto 4" }
     ],
     description: "Model pantofel Ballqish G03 buatan langsung pengrajin Desa Sruni, Gedangan, Sidoarjo. Dirancang nyaman dipakai kerja seharian dengan kulit sintetis PU Premium Grade A dan outsole elastis anti-slip yang fleksibel.",
     specs: [
@@ -51,14 +48,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 65000,
     badge: "Best Seller",
     rating: "4.9",
-    folder: "assets/katalog/G15",
     image: "assets/katalog/G15/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-02.svg",
     gallery: [
-      "assets/katalog/G15/foto-1.jpg",
-      "assets/katalog/G15/foto-2.jpg",
-      "assets/katalog/G15/foto-3.jpg",
-      "assets/katalog/G15/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G15/foto-1.jpg", alt: "Ballqish G15 - Foto 1" },
+      { id: 2, src: "assets/katalog/G15/foto-2.jpg", alt: "Ballqish G15 - Foto 2" },
+      { id: 3, src: "assets/katalog/G15/foto-3.jpg", alt: "Ballqish G15 - Foto 3" },
+      { id: 4, src: "assets/katalog/G15/foto-4.jpg", alt: "Ballqish G15 - Foto 4" }
     ],
     description: "Model pantofel Ballqish G15 dengan siluet formal rapi yang menjadi favorit guru, dosen, PNS, dan karyawan kantor. Nyaman untuk berdiri dan berjalan lama tanpa membuat tumit cepat pegal.",
     specs: [
@@ -80,14 +75,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 67000,
     badge: "Koleksi Favorit",
     rating: "4.9",
-    folder: "assets/katalog/G17",
     image: "assets/katalog/G17/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-03.svg",
     gallery: [
-      "assets/katalog/G17/foto-1.jpg",
-      "assets/katalog/G17/foto-2.jpg",
-      "assets/katalog/G17/foto-3.jpg",
-      "assets/katalog/G17/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G17/foto-1.jpg", alt: "Ballqish G17 - Foto 1" },
+      { id: 2, src: "assets/katalog/G17/foto-2.jpg", alt: "Ballqish G17 - Foto 2" },
+      { id: 3, src: "assets/katalog/G17/foto-3.jpg", alt: "Ballqish G17 - Foto 3" },
+      { id: 4, src: "assets/katalog/G17/foto-4.jpg", alt: "Ballqish G17 - Foto 4" }
     ],
     description: "Ballqish G17 menghadirkan tampilan formal yang bersih, tegas, dan berwibawa. Cocok untuk aktivitas dinas harian, rapat resmi, hingga pengadaan seragam instansi.",
     specs: [
@@ -109,14 +102,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 67000,
     badge: "Klasik Formal",
     rating: "4.9",
-    folder: "assets/katalog/G21",
     image: "assets/katalog/G21/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-04.svg",
     gallery: [
-      "assets/katalog/G21/foto-1.jpg",
-      "assets/katalog/G21/foto-2.jpg",
-      "assets/katalog/G21/foto-3.jpg",
-      "assets/katalog/G21/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G21/foto-1.jpg", alt: "Ballqish G21 - Foto 1" },
+      { id: 2, src: "assets/katalog/G21/foto-2.jpg", alt: "Ballqish G21 - Foto 2" },
+      { id: 3, src: "assets/katalog/G21/foto-3.jpg", alt: "Ballqish G21 - Foto 3" },
+      { id: 4, src: "assets/katalog/G21/foto-4.jpg", alt: "Ballqish G21 - Foto 4" }
     ],
     description: "Ballqish G21 menggabungkan desain pantofel klasik dengan acuan (last) yang disesuaikan anatomi telapak kaki Indonesia, sehingga pas, ringan, dan tidak membuat kaki panas.",
     specs: [
@@ -138,14 +129,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 68000,
     badge: "Elegan",
     rating: "4.9",
-    folder: "assets/katalog/G27",
     image: "assets/katalog/G27/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-05.svg",
     gallery: [
-      "assets/katalog/G27/foto-1.jpg",
-      "assets/katalog/G27/foto-2.jpg",
-      "assets/katalog/G27/foto-3.jpg",
-      "assets/katalog/G27/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G27/foto-1.jpg", alt: "Ballqish G27 - Foto 1" },
+      { id: 2, src: "assets/katalog/G27/foto-2.jpg", alt: "Ballqish G27 - Foto 2" },
+      { id: 3, src: "assets/katalog/G27/foto-3.jpg", alt: "Ballqish G27 - Foto 3" },
+      { id: 4, src: "assets/katalog/G27/foto-4.jpg", alt: "Ballqish G27 - Foto 4" }
     ],
     description: "Ballqish G27 dirancang dengan garis potongan rapi dan elegan untuk menunjang penampilan profesional di kantor, sekolah, acara wisuda, maupun resepsi.",
     specs: [
@@ -167,14 +156,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 68000,
     badge: "Modern",
     rating: "4.9",
-    folder: "assets/katalog/G29",
     image: "assets/katalog/G29/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-06.svg",
     gallery: [
-      "assets/katalog/G29/foto-1.jpg",
-      "assets/katalog/G29/foto-2.jpg",
-      "assets/katalog/G29/foto-3.jpg",
-      "assets/katalog/G29/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G29/foto-1.jpg", alt: "Ballqish G29 - Foto 1" },
+      { id: 2, src: "assets/katalog/G29/foto-2.jpg", alt: "Ballqish G29 - Foto 2" },
+      { id: 3, src: "assets/katalog/G29/foto-3.jpg", alt: "Ballqish G29 - Foto 3" },
+      { id: 4, src: "assets/katalog/G29/foto-4.jpg", alt: "Ballqish G29 - Foto 4" }
     ],
     description: "Ballqish G29 tampil modern dan proporsional dengan sentuhan finishing rapi khas pengrajin Sidoarjo. Tersedia untuk pembelian eceran maupun partai besar instansi.",
     specs: [
@@ -196,14 +183,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 68000,
     badge: "Seri Kantor",
     rating: "4.9",
-    folder: "assets/katalog/G60",
     image: "assets/katalog/G60/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-01.svg",
     gallery: [
-      "assets/katalog/G60/foto-1.jpg",
-      "assets/katalog/G60/foto-2.jpg",
-      "assets/katalog/G60/foto-3.jpg",
-      "assets/katalog/G60/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G60/foto-1.jpg", alt: "Ballqish G60 - Foto 1" },
+      { id: 2, src: "assets/katalog/G60/foto-2.jpg", alt: "Ballqish G60 - Foto 2" },
+      { id: 3, src: "assets/katalog/G60/foto-3.jpg", alt: "Ballqish G60 - Foto 3" },
+      { id: 4, src: "assets/katalog/G60/foto-4.jpg", alt: "Ballqish G60 - Foto 4" }
     ],
     description: "Ballqish G60 merupakan seri kerja harian yang kokoh namun tetap ringan di kaki. Menjawab kebutuhan mobilitas tinggi karyawan, guru, dan mahasiswa.",
     specs: [
@@ -225,14 +210,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 70000,
     badge: "Eksekutif",
     rating: "4.9",
-    folder: "assets/katalog/G70",
     image: "assets/katalog/G70/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-02.svg",
     gallery: [
-      "assets/katalog/G70/foto-1.jpg",
-      "assets/katalog/G70/foto-2.jpg",
-      "assets/katalog/G70/foto-3.jpg",
-      "assets/katalog/G70/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G70/foto-1.jpg", alt: "Ballqish G70 - Foto 1" },
+      { id: 2, src: "assets/katalog/G70/foto-2.jpg", alt: "Ballqish G70 - Foto 2" },
+      { id: 3, src: "assets/katalog/G70/foto-3.jpg", alt: "Ballqish G70 - Foto 3" },
+      { id: 4, src: "assets/katalog/G70/foto-4.jpg", alt: "Ballqish G70 - Foto 4" }
     ],
     description: "Ballqish G70 hadir dengan tampilan eksekutif yang tenang dan berwibawa. Mudah dipadukan dengan celana bahan formal, batik resmi, maupun seragam dinas.",
     specs: [
@@ -254,14 +237,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 72000,
     badge: "Eksklusif",
     rating: "4.9",
-    folder: "assets/katalog/G80",
     image: "assets/katalog/G80/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-04.svg",
     gallery: [
-      "assets/katalog/G80/foto-1.jpg",
-      "assets/katalog/G80/foto-2.jpg",
-      "assets/katalog/G80/foto-3.jpg",
-      "assets/katalog/G80/foto-4.jpg"
+      { id: 1, src: "assets/katalog/G80/foto-1.jpg", alt: "Ballqish G80 - Foto 1" },
+      { id: 2, src: "assets/katalog/G80/foto-2.jpg", alt: "Ballqish G80 - Foto 2" },
+      { id: 3, src: "assets/katalog/G80/foto-3.jpg", alt: "Ballqish G80 - Foto 3" },
+      { id: 4, src: "assets/katalog/G80/foto-4.jpg", alt: "Ballqish G80 - Foto 4" }
     ],
     description: "Ballqish G80 dirancang bagi Anda yang ingin tampil modern, tegas, dan berwibawa di setiap kesempatan resmi maupun kerja harian.",
     specs: [
@@ -283,14 +264,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 70000,
     badge: "Seri K",
     rating: "4.9",
-    folder: "assets/katalog/K01",
     image: "assets/katalog/K01/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-05.svg",
     gallery: [
-      "assets/katalog/K01/foto-1.jpg",
-      "assets/katalog/K01/foto-2.jpg",
-      "assets/katalog/K01/foto-3.jpg",
-      "assets/katalog/K01/foto-4.jpg"
+      { id: 1, src: "assets/katalog/K01/foto-1.jpg", alt: "Ballqish K01 - Foto 1" },
+      { id: 2, src: "assets/katalog/K01/foto-2.jpg", alt: "Ballqish K01 - Foto 2" },
+      { id: 3, src: "assets/katalog/K01/foto-3.jpg", alt: "Ballqish K01 - Foto 3" },
+      { id: 4, src: "assets/katalog/K01/foto-4.jpg", alt: "Ballqish K01 - Foto 4" }
     ],
     description: "Ballqish K01 dari seri K unggulan workshop Desa Sruni, Sidoarjo. Menghadirkan keseimbangan sempurna antara daya tahan, kerapian pengerjaan, dan kenyamanan pijakan.",
     specs: [
@@ -312,14 +291,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 72000,
     badge: "Seri T",
     rating: "4.9",
-    folder: "assets/katalog/T02",
     image: "assets/katalog/T02/foto-1.jpg",
-    fallbackImage: "assets/placeholder-model-03.svg",
     gallery: [
-      "assets/katalog/T02/foto-1.jpg",
-      "assets/katalog/T02/foto-2.jpg",
-      "assets/katalog/T02/foto-3.jpg",
-      "assets/katalog/T02/foto-4.jpg"
+      { id: 1, src: "assets/katalog/T02/foto-1.jpg", alt: "Ballqish T02 - Foto 1" },
+      { id: 2, src: "assets/katalog/T02/foto-2.jpg", alt: "Ballqish T02 - Foto 2" },
+      { id: 3, src: "assets/katalog/T02/foto-3.jpg", alt: "Ballqish T02 - Foto 3" },
+      { id: 4, src: "assets/katalog/T02/foto-4.jpg", alt: "Ballqish T02 - Foto 4" }
     ],
     description: "Ballqish T02 dari seri T unggulan Ballqish Shoes Sidoarjo. Pilihan ideal untuk upacara formal, wisuda, sidang, maupun dinas resmi dengan kenyamanan maksimal seharian.",
     specs: [

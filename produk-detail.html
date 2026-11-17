@@ -163,41 +163,42 @@
           
           <!-- Galeri Foto (Main Image + Thumbnails Row) -->
           <div class="detail-media-gallery">
-            <div class="detail-main-img-wrap" id="gallery-main-stage">
-              <button type="button" class="gallery-nav-btn prev" id="gallery-btn-prev" aria-label="Foto sebelumnya">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-                </svg>
-              </button>
-              <img 
-                id="detail-main-img" 
-                src="assets/katalog/G03/foto-1.jpg" 
-                alt="Ballqish G03 - Foto 1"
-                width="1080"
-                height="720"
-                fetchpriority="high"
-                decoding="async"
-                onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
-              <button type="button" class="gallery-nav-btn next" id="gallery-btn-next" aria-label="Foto berikutnya">
-                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-                </svg>
-              </button>
-              <span class="gallery-counter-badge" id="gallery-counter-badge">1 / 4</span>
-            </div>
-            <div class="detail-thumbs-strip" id="detail-thumbs-strip" role="tablist" aria-label="Galeri Foto Ballqish G03">
-              <button type="button" class="thumb-btn-img active" data-index="0" data-src="assets/katalog/G03/foto-1.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="true" aria-label="Foto 1">
-                <img src="assets/katalog/G03/foto-1.jpg" alt="Foto 1" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
-              </button>
-              <button type="button" class="thumb-btn-img" data-index="1" data-src="assets/katalog/G03/foto-2.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="false" aria-label="Foto 2">
-                <img src="assets/katalog/G03/foto-2.jpg" alt="Foto 2" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
-              </button>
-              <button type="button" class="thumb-btn-img" data-index="2" data-src="assets/katalog/G03/foto-3.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="false" aria-label="Foto 3">
-                <img src="assets/katalog/G03/foto-3.jpg" alt="Foto 3" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
-              </button>
-              <button type="button" class="thumb-btn-img" data-index="3" data-src="assets/katalog/G03/foto-4.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="false" aria-label="Foto 4">
-                <img src="assets/katalog/G03/foto-4.jpg" alt="Foto 4" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
-              </button>
+            <div class="product-gallery-component" data-gallery-root>
+              <div class="detail-main-img-wrap" id="gallery-main-stage">
+                <button type="button" class="gallery-nav-btn prev" id="gallery-btn-prev" aria-label="Foto sebelumnya">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <img 
+                  id="detail-main-img" 
+                  src="/images/model-g38/G03.1.jpg" 
+                  alt="Ballqish G03 - Foto 1"
+                  width="1080"
+                  height="720"
+                  fetchpriority="high"
+                  decoding="async">
+                <button type="button" class="gallery-nav-btn next" id="gallery-btn-next" aria-label="Foto berikutnya">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </button>
+                <span class="gallery-counter-badge" id="gallery-counter-badge">1 / 4</span>
+              </div>
+              <div class="detail-thumbs-strip" id="detail-thumbs-strip" role="tablist" aria-label="Galeri Foto Ballqish G03">
+                <button type="button" class="thumb-btn-img active" data-id="1" data-index="0" data-src="/images/model-g38/G03.1.jpg" role="tab" aria-selected="true" aria-label="Ballqish G03 - Foto 1">
+                  <img src="/images/model-g38/G03.1.jpg" alt="Ballqish G03 - Foto 1" width="1080" height="720" loading="lazy" decoding="async">
+                </button>
+                <button type="button" class="thumb-btn-img" data-id="2" data-index="1" data-src="/images/model-g38/G03.13.jpg" role="tab" aria-selected="false" aria-label="Ballqish G03 - Foto 2">
+                  <img src="/images/model-g38/G03.13.jpg" alt="Ballqish G03 - Foto 2" width="1080" height="720" loading="lazy" decoding="async">
+                </button>
+                <button type="button" class="thumb-btn-img" data-id="3" data-index="2" data-src="/images/model-g38/G03.14.jpg" role="tab" aria-selected="false" aria-label="Ballqish G03 - Foto 3">
+                  <img src="/images/model-g38/G03.14.jpg" alt="Ballqish G03 - Foto 3" width="1080" height="720" loading="lazy" decoding="async">
+                </button>
+                <button type="button" class="thumb-btn-img" data-id="4" data-index="3" data-src="/images/model-g38/G03.22.jpg" role="tab" aria-selected="false" aria-label="Ballqish G03 - Foto 4">
+                  <img src="/images/model-g38/G03.22.jpg" alt="Ballqish G03 - Foto 4" width="1080" height="720" loading="lazy" decoding="async">
+                </button>
+              </div>
             </div>
 
             <div style="background-color: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; margin-top: 14px;">
@@ -559,8 +560,9 @@
     </svg>
   </a>
 
-  <!-- Data Produk Terpusat & Script Core -->
+  <!-- Data Produk Terpusat, Komponen Galeri & Script Core -->
   <script src="products.js"></script>
+  <script src="gallery-component.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1538,7 +1538,8 @@ a {
   }
 }
 
-.detail-media-gallery {
+.detail-media-gallery,
+.product-gallery-component {
   display: flex;
   flex-direction: column;
   gap: 14px;

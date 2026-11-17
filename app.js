@@ -19,9 +19,15 @@
   // Helper normalisasi item produk agar aman meski user hanya mengisi field dasar di products.js
   function normalizeProduct(raw, index) {
     const numStr = raw.number || String(index + 1).padStart(2, '0');
-    const mainImg = raw.image || (raw.folder ? `${raw.folder}/foto-1.jpg` : 'assets/placeholder-model-01.svg');
-    const fallbackImg = raw.fallbackImage || 'assets/placeholder-model-01.svg';
-    const gallery = Array.isArray(raw.gallery) && raw.gallery.length > 0 ? raw.gallery : [mainImg];
+    const rawGallery = Array.isArray(raw.gallery) && raw.gallery.length > 0
+      ? raw.gallery
+      : (raw.image ? [{ id: 1, src: raw.image, alt: `${raw.name || 'Produk Ballqish'} - Foto 1` }] : (window.DEFAULT_GALLERY_IMAGES || []));
+    const gallery = rawGallery.map((item, idx) =>
+      typeof item === 'string'
+        ? { id: idx + 1, src: item, alt: `${raw.name || 'Produk Ballqish'} - Foto ${idx + 1}` }
+        : { id: item.id !== undefined ? item.id : idx + 1, src: item.src, alt: item.alt || `${raw.name || 'Produk Ballqish'} - Foto ${idx + 1}` }
+    );
+    const mainImg = raw.image || (gallery[0] ? gallery[0].src : '');
     const sizes = Array.isArray(raw.sizes) && raw.sizes.length > 0 ? raw.sizes : ['39', '40', '41', '42', '43'];
     const specs = Array.isArray(raw.specs) && raw.specs.length > 0 ? raw.specs : [
       'Material: Kulit Sintetis PU Premium Grade A (Lentur, Tidak Mudah Retak/Pecah)',
@@ -41,7 +47,6 @@
       badge: raw.badge || '',
       rating: raw.rating || '4.9',
       image: mainImg,
-      fallbackImage: fallbackImg,
       gallery,
       description: raw.description || 'Sepatu pantofel handmade produksi langsung pengrajin Desa Sruni, Gedangan, Sidoarjo sejak tahun 2002.',
       specs,
@@ -119,8 +124,7 @@
             height="720"
             loading="${idx < 4 ? 'eager' : 'lazy'}"
             ${idx < 2 ? 'fetchpriority="high"' : ''}
-            decoding="async"
-            onerror="this.onerror=null; this.src='${p.fallbackImage}';">
+            decoding="async">
           ${p.badge ? `<span class="card-10-badge">${p.badge}</span>` : ''}
           <span class="card-10-num">${p.number}</span>
         </a>
@@ -217,8 +221,7 @@
             width="1080"
             height="720"
             loading="lazy"
-            decoding="async"
-            onerror="this.onerror=null; this.src='${p.fallbackImage}';">
+            decoding="async">
           ${p.badge ? `<span class="card-10-badge">${p.badge}</span>` : ''}
           <span class="card-10-num">${p.number}</span>
         </div>
@@ -264,69 +267,15 @@
       ? Math.round((1 - (product.price / product.originalPrice)) * 100)
       : 0;
 
-    // Helper render galeri thumbnail berbasis array .map() (bebas jumlah foto)
-    function buildThumbnailGalleryHTML(images, title, fallback) {
-      const hasMultiple = images.length > 1;
-      return `
-        <div class="detail-main-img-wrap" id="gallery-main-stage">
-          ${hasMultiple ? `
-            <button type="button" class="gallery-nav-btn prev" id="gallery-btn-prev" aria-label="Foto sebelumnya">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
-              </svg>
-            </button>
-          ` : ''}
-
-          <img 
-            id="detail-main-img" 
-            src="${images[0]}" 
-            alt="${title} - Foto 1"
-            width="1080"
-            height="720"
-            fetchpriority="high"
-            decoding="async"
-            onerror="this.onerror=null; this.src='${fallback}';">
-
-          ${hasMultiple ? `
-            <button type="button" class="gallery-nav-btn next" id="gallery-btn-next" aria-label="Foto berikutnya">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
-              </svg>
-            </button>
-            <span class="gallery-counter-badge" id="gallery-counter-badge">1 / ${images.length}</span>
-          ` : ''}
-        </div>
-
-        <div class="detail-thumbs-strip" id="detail-thumbs-strip" role="tablist" aria-label="Galeri Foto ${title}">
-          ${images.map((imgSrc, gIdx) => `
-            <button 
-              type="button" 
-              class="thumb-btn-img ${gIdx === 0 ? 'active' : ''}" 
-              data-index="${gIdx}"
-              data-src="${imgSrc}" 
-              data-fallback="${fallback}" 
-              role="tab"
-              aria-selected="${gIdx === 0 ? 'true' : 'false'}"
-              aria-label="Lihat Foto ${gIdx + 1} dari ${images.length}">
-              <img 
-                src="${imgSrc}" 
-                alt="${title} - Thumbnail ${gIdx + 1}"
-                width="1080"
-                height="720"
-                loading="lazy"
-                decoding="async"
-                onerror="this.onerror=null; this.src='${fallback}';">
-            </button>
-          `).join('')}
-        </div>
-      `;
-    }
+    const galleryHTML = window.ProductImageGallery
+      ? window.ProductImageGallery.render(product.gallery, product.name)
+      : '';
 
     container.innerHTML = `
       <div class="detail-view-grid">
-        <!-- Kolom Galeri Foto (Main Image + Array-Mapped Thumbnails) -->
+        <!-- Kolom Galeri Foto (ProductImageGallery Component - Array of Objects) -->
         <div class="detail-media-gallery">
-          ${buildThumbnailGalleryHTML(product.gallery, product.name, product.fallbackImage)}
+          ${galleryHTML}
 
           <div style="background-color: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; margin-top: 14px;">
             <h4 style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ballqish-red); font-weight: 700; margin-bottom: 8px;">
@@ -463,102 +412,9 @@
       </div>
     `;
 
-    // --- INTERACTIVE THUMBNAIL GALLERY ENGINE (Click, Prev/Next, Touch Swipe & Zoom) ---
-    const mainStage = container.querySelector('#gallery-main-stage');
-    const mainImg = container.querySelector('#detail-main-img');
-    const thumbBtns = Array.from(container.querySelectorAll('.thumb-btn-img'));
-    const btnPrev = container.querySelector('#gallery-btn-prev');
-    const btnNext = container.querySelector('#gallery-btn-next');
-    const counterBadge = container.querySelector('#gallery-counter-badge');
-    const totalImages = product.gallery.length;
-    let activeImgIndex = 0;
-
-    function updateGalleryImage(newIndex) {
-      if (!mainImg || totalImages === 0) return;
-      activeImgIndex = ((newIndex % totalImages) + totalImages) % totalImages;
-      const nextSrc = product.gallery[activeImgIndex];
-
-      mainImg.classList.add('is-switching');
-      setTimeout(() => {
-        mainImg.src = nextSrc;
-        mainImg.alt = `${product.name} - Foto ${activeImgIndex + 1}`;
-        mainImg.onerror = function () {
-          this.onerror = null;
-          this.src = product.fallbackImage;
-        };
-        mainImg.classList.remove('is-switching');
-      }, 90);
-
-      if (counterBadge) {
-        counterBadge.textContent = `${activeImgIndex + 1} / ${totalImages}`;
-      }
-
-      thumbBtns.forEach((btn, idx) => {
-        const isCurrent = idx === activeImgIndex;
-        btn.classList.toggle('active', isCurrent);
-        btn.setAttribute('aria-selected', isCurrent ? 'true' : 'false');
-        if (isCurrent) {
-          btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-        }
-      });
-    }
-
-    thumbBtns.forEach((btn, idx) => {
-      btn.addEventListener('click', () => updateGalleryImage(idx));
-    });
-
-    if (btnPrev) btnPrev.addEventListener('click', () => updateGalleryImage(activeImgIndex - 1));
-    if (btnNext) btnNext.addEventListener('click', () => updateGalleryImage(activeImgIndex + 1));
-
-    // Touch swipe support pada layar HP
-    if (mainStage && totalImages > 1) {
-      let touchStartX = 0;
-      mainStage.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-      }, { passive: true });
-      mainStage.addEventListener('touchend', (e) => {
-        const deltaX = e.changedTouches[0].screenX - touchStartX;
-        if (Math.abs(deltaX) > 40) {
-          updateGalleryImage(deltaX < 0 ? activeImgIndex + 1 : activeImgIndex - 1);
-        }
-      }, { passive: true });
-    }
-
-    // Lightbox Zoom saat foto utama diklik
-    let lightbox = document.getElementById('gallery-lightbox');
-    if (!lightbox) {
-      lightbox = document.createElement('div');
-      lightbox.id = 'gallery-lightbox';
-      lightbox.className = 'gallery-lightbox';
-      lightbox.innerHTML = `
-        <button type="button" class="gallery-lightbox-close" id="gallery-lightbox-close" aria-label="Tutup Zoom">&times;</button>
-        <img class="gallery-lightbox-img" id="gallery-lightbox-img" src="" alt="Preview Zoom">
-      `;
-      document.body.appendChild(lightbox);
-
-      const closeLightbox = () => {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-      };
-      lightbox.querySelector('#gallery-lightbox-close').addEventListener('click', closeLightbox);
-      lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
-      });
-    }
-
-    if (mainImg) {
-      mainImg.addEventListener('click', () => {
-        const lbImg = document.getElementById('gallery-lightbox-img');
-        if (lbImg) {
-          lbImg.src = mainImg.src;
-          lbImg.alt = mainImg.alt;
-        }
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      });
+    // Mount ProductImageGallery component (click thumbnail, prev/next, swipe, zoom)
+    if (window.ProductImageGallery) {
+      window.ProductImageGallery.mount(container, product.gallery, product.name);
     }
 
     // Helper kirim order via WhatsApp Owner (0896-1606-7647)

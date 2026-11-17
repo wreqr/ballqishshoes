@@ -168,34 +168,25 @@
                 id="detail-main-img" 
                 src="foto produk/model-01/foto-1.jpg" 
                 alt="Ballqish G38 Hitam Loafer"
+                width="1080"
+                height="720"
+                fetchpriority="high"
+                decoding="async"
                 onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
             </div>
             <div class="detail-thumbs-strip">
               <button type="button" class="thumb-btn-img active" data-src="foto produk/model-01/foto-1.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 1">
-                <img src="foto produk/model-01/foto-1.jpg" alt="Foto 1" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+                <img src="foto produk/model-01/foto-1.jpg" alt="Foto 1" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
               </button>
               <button type="button" class="thumb-btn-img" data-src="foto produk/model-01/foto-2.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 2">
-                <img src="foto produk/model-01/foto-2.jpg" alt="Foto 2" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+                <img src="foto produk/model-01/foto-2.jpg" alt="Foto 2" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
               </button>
               <button type="button" class="thumb-btn-img" data-src="foto produk/model-01/foto-3.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 3">
-                <img src="foto produk/model-01/foto-3.jpg" alt="Foto 3" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+                <img src="foto produk/model-01/foto-3.jpg" alt="Foto 3" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
               </button>
-            </div>
-
-            <!-- Petunjuk Upload Foto Folder User -->
-            <div style="background-color: #ffffff; border: 1px dashed var(--ballqish-red); border-radius: var(--radius-sm); padding: 16px; margin-top: 14px;">
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
-                <span style="font-size: 16px;">📁</span>
-                <strong style="font-size: 12px; color: var(--ballqish-red); text-transform: uppercase; letter-spacing: 0.1em;">
-                  Folder Foto Model Ini:
-                </strong>
-              </div>
-              <p style="font-size: 12px; color: var(--ink-secondary); line-height: 1.5; margin-bottom: 6px;">
-                Simpan foto asli jepretan Anda di: <strong style="color: var(--ink); background-color: var(--bg-subtle); padding: 2px 6px; border-radius: 4px;">foto produk/model-01/</strong>
-              </p>
-              <div style="font-size: 11px; color: var(--ink-muted);">
-                Format nama file: <strong>foto-1.jpg</strong> (utama), <strong>foto-2.jpg</strong>, <strong>foto-3.jpg</strong>. Foto akan otomatis muncul menggantikan placeholder di atas.
-              </div>
+              <button type="button" class="thumb-btn-img" data-src="foto produk/model-01/foto-4.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 4">
+                <img src="foto produk/model-01/foto-4.jpg" alt="Foto 4" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+              </button>
             </div>
 
             <div style="background-color: #ffffff; border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 18px; margin-top: 14px;">
@@ -392,9 +383,9 @@
       </div>
     </section>
 
-    <!-- Model Lainnya dari 10 Pilihan Sepatu -->
+    <!-- Model Lainnya dari Pilihan Sepatu -->
     <section class="container" style="margin-bottom: 60px;">
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; margin-bottom: 24px;">
         <div>
           <span style="font-size: 10px; text-transform: uppercase; letter-spacing: 0.22em; color: var(--ballqish-red); font-weight: 700;">
             PILIHAN MODEL LAINNYA
@@ -403,19 +394,22 @@
             Jelajahi Koleksi Sepatu Lainnya
           </h2>
         </div>
-        <a href="katalog.html" class="nav-hyperlink" style="border: 1px solid var(--border-strong);">
+        <a href="katalog.html" class="nav-hyperlink" style="border: 1px solid var(--border-strong); min-height: 44px;">
           Buka Semua 6 Model &rarr;
         </a>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 20px;">
         <!-- Alt 1: G70 New Executive -->
         <a href="produk-detail.html?id=g70-executive" class="catalog-card-10" style="text-decoration: none;">
           <div class="card-10-media">
             <img 
               src="foto produk/model-02/foto-1.jpg" 
               alt="Ballqish G70 New Executive Doff" 
+              width="1080"
+              height="720"
               loading="lazy"
+              decoding="async"
               onerror="this.onerror=null; this.src='assets/placeholder-model-02.svg';">
             <span class="card-10-badge">Koleksi Favorit</span>
             <span class="card-10-num">02</span>
@@ -436,7 +430,10 @@
             <img 
               src="foto produk/model-03/foto-1.jpg" 
               alt="Ballqish T42 Classic Derby Lace-Up" 
+              width="1080"
+              height="720"
               loading="lazy"
+              decoding="async"
               onerror="this.onerror=null; this.src='assets/placeholder-model-03.svg';">
             <span class="card-10-badge">Klasik Formal</span>
             <span class="card-10-num">03</span>
@@ -457,7 +454,10 @@
             <img 
               src="foto produk/model-05/foto-1.jpg" 
               alt="Ballqish T50 Wingtip Brogue" 
+              width="1080"
+              height="720"
               loading="lazy"
+              decoding="async"
               onerror="this.onerror=null; this.src='assets/placeholder-model-05.svg';">
             <span class="card-10-badge">Eksklusif</span>
             <span class="card-10-num">05</span>
@@ -478,7 +478,10 @@
             <img 
               src="foto produk/model-04/foto-1.jpg" 
               alt="Ballqish G80 Double Monkstrap" 
+              width="1080"
+              height="720"
               loading="lazy"
+              decoding="async"
               onerror="this.onerror=null; this.src='assets/placeholder-model-04.svg';">
             <span class="card-10-badge">Gaya Eropa</span>
             <span class="card-10-num">04</span>

@@ -158,34 +158,45 @@
     <section class="product-detail-section">
       <div class="container" id="single-product-container">
         
-        <!-- Pre-rendered Semantic Fallback (Ballqish G38 Hitam Loafer) -->
+        <!-- Pre-rendered Semantic Fallback (Ballqish G03) -->
         <div class="detail-view-grid">
           
-          <!-- Galeri Foto -->
+          <!-- Galeri Foto (Main Image + Thumbnails Row) -->
           <div class="detail-media-gallery">
-            <div class="detail-main-img-wrap">
+            <div class="detail-main-img-wrap" id="gallery-main-stage">
+              <button type="button" class="gallery-nav-btn prev" id="gallery-btn-prev" aria-label="Foto sebelumnya">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+                </svg>
+              </button>
               <img 
                 id="detail-main-img" 
-                src="foto produk/model-01/foto-1.jpg" 
-                alt="Ballqish G38 Hitam Loafer"
+                src="assets/katalog/G03/foto-1.jpg" 
+                alt="Ballqish G03 - Foto 1"
                 width="1080"
                 height="720"
                 fetchpriority="high"
                 decoding="async"
                 onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+              <button type="button" class="gallery-nav-btn next" id="gallery-btn-next" aria-label="Foto berikutnya">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <span class="gallery-counter-badge" id="gallery-counter-badge">1 / 4</span>
             </div>
-            <div class="detail-thumbs-strip">
-              <button type="button" class="thumb-btn-img active" data-src="foto produk/model-01/foto-1.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 1">
-                <img src="foto produk/model-01/foto-1.jpg" alt="Foto 1" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+            <div class="detail-thumbs-strip" id="detail-thumbs-strip" role="tablist" aria-label="Galeri Foto Ballqish G03">
+              <button type="button" class="thumb-btn-img active" data-index="0" data-src="assets/katalog/G03/foto-1.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="true" aria-label="Foto 1">
+                <img src="assets/katalog/G03/foto-1.jpg" alt="Foto 1" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
               </button>
-              <button type="button" class="thumb-btn-img" data-src="foto produk/model-01/foto-2.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 2">
-                <img src="foto produk/model-01/foto-2.jpg" alt="Foto 2" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+              <button type="button" class="thumb-btn-img" data-index="1" data-src="assets/katalog/G03/foto-2.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="false" aria-label="Foto 2">
+                <img src="assets/katalog/G03/foto-2.jpg" alt="Foto 2" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
               </button>
-              <button type="button" class="thumb-btn-img" data-src="foto produk/model-01/foto-3.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 3">
-                <img src="foto produk/model-01/foto-3.jpg" alt="Foto 3" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+              <button type="button" class="thumb-btn-img" data-index="2" data-src="assets/katalog/G03/foto-3.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="false" aria-label="Foto 3">
+                <img src="assets/katalog/G03/foto-3.jpg" alt="Foto 3" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
               </button>
-              <button type="button" class="thumb-btn-img" data-src="foto produk/model-01/foto-4.jpg" data-fallback="assets/placeholder-model-01.svg" aria-label="Foto 4">
-                <img src="foto produk/model-01/foto-4.jpg" alt="Foto 4" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
+              <button type="button" class="thumb-btn-img" data-index="3" data-src="assets/katalog/G03/foto-4.jpg" data-fallback="assets/placeholder-model-01.svg" role="tab" aria-selected="false" aria-label="Foto 4">
+                <img src="assets/katalog/G03/foto-4.jpg" alt="Foto 4" width="1080" height="720" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='assets/placeholder-model-01.svg';">
               </button>
             </div>
 
@@ -204,13 +215,13 @@
           <!-- Kolom Informasi & Order -->
           <div class="detail-info-box">
             <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 6px;">
-              <span class="card-10-badge" style="position: static;">Best Seller</span>
+              <span class="card-10-badge" style="position: static;">Pilihan Utama</span>
               <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--ink-muted); font-weight: 600;">
-                Slip-On Tanpa Tali • Ref: G38-BLK
+                Ref: G03
               </span>
             </div>
 
-            <h1 class="detail-title">Ballqish G38 Hitam Loafer</h1>
+            <h1 class="detail-title">Ballqish G03</h1>
 
             <div style="display: flex; align-items: center; gap: 6px; font-size: 13px; margin-bottom: 12px;">
               <span style="color: #f59e0b; letter-spacing: 1px;">★★★★★</span>
@@ -266,30 +277,48 @@
               </ul>
             </div>
 
-            <!-- Pilihan Ukuran -->
+            <!-- Pilihan Ukuran Standar -->
             <div style="margin-bottom: 20px;">
               <div style="display: flex; justify-content: space-between; align-items: center;">
                 <label style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; color: var(--ink);">
-                  Pilih Ukuran Sepatu (EU):
+                  Pilih Ukuran Standar (EU):
                 </label>
                 <span id="selected-size-label" style="font-size: 12px; font-weight: 700; color: var(--ballqish-red);">
-                  Ukuran: 38
+                  Ukuran: 39
                 </span>
               </div>
 
               <div class="size-pill-grid" id="detail-size-selector">
-                <button type="button" class="size-pill-choice selected" data-size="38">38</button>
-                <button type="button" class="size-pill-choice" data-size="39">39</button>
+                <button type="button" class="size-pill-choice selected" data-size="39">39</button>
                 <button type="button" class="size-pill-choice" data-size="40">40</button>
                 <button type="button" class="size-pill-choice" data-size="41">41</button>
                 <button type="button" class="size-pill-choice" data-size="42">42</button>
                 <button type="button" class="size-pill-choice" data-size="43">43</button>
-                <button type="button" class="size-pill-choice" data-size="44">44</button>
-                <button type="button" class="size-pill-choice" data-size="45">45</button>
+              </div>
+
+              <p class="size-custom-note">
+                Tersedia ukuran custom kecil (36-38) dan besar (44-45) by request dengan penyesuaian harga.
+              </p>
+            </div>
+
+            <!-- Sistem Pre-Order (PO) -->
+            <div class="po-flow-box">
+              <div class="po-flow-title">
+                <span aria-hidden="true">📋</span>
+                <span>Sistem Pre-Order (PO)</span>
+              </div>
+              <div class="po-flow-steps">
+                <span class="po-step-chip">💬 Diskusi Harga</span>
+                <span class="po-step-arrow" aria-hidden="true">➔</span>
+                <span class="po-step-chip">💳 Pesanan Masuk &amp; Bayar</span>
+                <span class="po-step-arrow" aria-hidden="true">➔</span>
+                <span class="po-step-chip">🛠️ Proses Produksi</span>
+                <span class="po-step-arrow" aria-hidden="true">➔</span>
+                <span class="po-step-chip">📦 Sepatu Dikirim</span>
               </div>
             </div>
 
-            <!-- Pilihan Jumlah & Tombol Pesan Langsung via WhatsApp Owner -->
+            <!-- Pilihan Jumlah & Tombol Diskusi & Pesan via WhatsApp (PO) -->
             <div class="order-action-row">
               <div class="qty-stepper">
                 <button type="button" id="btn-qty-minus" style="width: 40px; height: 100%; font-size: 18px; font-weight: 700; color: var(--ink);">&minus;</button>
@@ -297,11 +326,11 @@
                 <button type="button" id="btn-qty-plus" style="width: 40px; height: 100%; font-size: 18px; font-weight: 700; color: var(--ink);">+</button>
               </div>
 
-              <a href="https://wa.me/6289616067647?text=Halo%20Admin%20Ballqish%20Shoes%20(0896-1606-7647),%20saya%20tertarik%20untuk%20memesan%20sepatu%20pantofel%20G38%20Hitam%20Loafer" target="_blank" rel="noopener noreferrer" id="btn-order-wa-owner" class="order-wa-main-btn" style="flex: 1; margin-top: 0; text-decoration: none;">
+              <a href="https://wa.me/6289616067647?text=Halo%20Admin%20Ballqish%20Shoes%20(0896-1606-7647),%20saya%20ingin%20diskusi%20%26%20pesan%20Pre-Order%20(PO)%20sepatu%20Ballqish%20G03" target="_blank" rel="noopener noreferrer" id="btn-order-wa-owner" class="order-wa-main-btn" style="flex: 1; margin-top: 0; text-decoration: none;">
                 <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197-.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                 </svg>
-                Pesan via WhatsApp (0896-1606-7647)
+                Diskusi &amp; Pesan via WhatsApp (PO)
               </a>
             </div>
 
@@ -395,107 +424,11 @@
           </h2>
         </div>
         <a href="katalog.html" class="nav-hyperlink" style="border: 1px solid var(--border-strong); min-height: 44px;">
-          Buka Semua 6 Model &rarr;
+          Lihat Semua Model &rarr;
         </a>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 20px;">
-        <!-- Alt 1: G70 New Executive -->
-        <a href="produk-detail.html?id=g70-executive" class="catalog-card-10" style="text-decoration: none;">
-          <div class="card-10-media">
-            <img 
-              src="foto produk/model-02/foto-1.jpg" 
-              alt="Ballqish G70 New Executive Doff" 
-              width="1080"
-              height="720"
-              loading="lazy"
-              decoding="async"
-              onerror="this.onerror=null; this.src='assets/placeholder-model-02.svg';">
-            <span class="card-10-badge">Koleksi Favorit</span>
-            <span class="card-10-num">02</span>
-          </div>
-          <div class="card-10-content">
-            <span class="card-10-category">Slip-On Tanpa Tali</span>
-            <h4 class="card-10-title" style="font-size: 16px;">Ballqish G70 New Executive</h4>
-            <div class="card-10-pricing mt-auto" style="margin-bottom: 0; padding-top: 8px;">
-              <span class="card-price-main" style="font-size: 16px;">Rp 89.000</span>
-              <span class="card-price-strike">Rp 130.000</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Alt 2: T42 Derby Lace Up -->
-        <a href="produk-detail.html?id=t42-derby" class="catalog-card-10" style="text-decoration: none;">
-          <div class="card-10-media">
-            <img 
-              src="foto produk/model-03/foto-1.jpg" 
-              alt="Ballqish T42 Classic Derby Lace-Up" 
-              width="1080"
-              height="720"
-              loading="lazy"
-              decoding="async"
-              onerror="this.onerror=null; this.src='assets/placeholder-model-03.svg';">
-            <span class="card-10-badge">Klasik Formal</span>
-            <span class="card-10-num">03</span>
-          </div>
-          <div class="card-10-content">
-            <span class="card-10-category">Bertali (Lace-Up)</span>
-            <h4 class="card-10-title" style="font-size: 16px;">Ballqish T42 Classic Derby</h4>
-            <div class="card-10-pricing mt-auto" style="margin-bottom: 0; padding-top: 8px;">
-              <span class="card-price-main" style="font-size: 16px;">Rp 95.000</span>
-              <span class="card-price-strike">Rp 140.000</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Alt 3: T50 Wingtip Brogue -->
-        <a href="produk-detail.html?id=t50-brogue" class="catalog-card-10" style="text-decoration: none;">
-          <div class="card-10-media">
-            <img 
-              src="foto produk/model-05/foto-1.jpg" 
-              alt="Ballqish T50 Wingtip Brogue" 
-              width="1080"
-              height="720"
-              loading="lazy"
-              decoding="async"
-              onerror="this.onerror=null; this.src='assets/placeholder-model-05.svg';">
-            <span class="card-10-badge">Eksklusif</span>
-            <span class="card-10-num">05</span>
-          </div>
-          <div class="card-10-content">
-            <span class="card-10-category">Bertali (Brogue)</span>
-            <h4 class="card-10-title" style="font-size: 16px;">Ballqish T50 Wingtip Brogue</h4>
-            <div class="card-10-pricing mt-auto" style="margin-bottom: 0; padding-top: 8px;">
-              <span class="card-price-main" style="font-size: 16px;">Rp 105.000</span>
-              <span class="card-price-strike">Rp 155.000</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Alt 4: G80 Monkstrap -->
-        <a href="produk-detail.html?id=g80-monkstrap" class="catalog-card-10" style="text-decoration: none;">
-          <div class="card-10-media">
-            <img 
-              src="foto produk/model-04/foto-1.jpg" 
-              alt="Ballqish G80 Double Monkstrap" 
-              width="1080"
-              height="720"
-              loading="lazy"
-              decoding="async"
-              onerror="this.onerror=null; this.src='assets/placeholder-model-04.svg';">
-            <span class="card-10-badge">Gaya Eropa</span>
-            <span class="card-10-num">04</span>
-          </div>
-          <div class="card-10-content">
-            <span class="card-10-category">Double Monkstrap</span>
-            <h4 class="card-10-title" style="font-size: 16px;">Ballqish G80 Monkstrap</h4>
-            <div class="card-10-pricing mt-auto" style="margin-bottom: 0; padding-top: 8px;">
-              <span class="card-price-main" style="font-size: 16px;">Rp 99.000</span>
-              <span class="card-price-strike">Rp 145.000</span>
-            </div>
-          </div>
-        </a>
-      </div>
+      <div id="related-products-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 20px;"></div>
     </section>
 
   </main>
@@ -553,7 +486,7 @@
             <a href="katalog.html" class="footer-nav-link">
               <span>➔</span> Katalog Sepatu Pantofel
             </a>
-            <a href="produk-detail.html?id=g38-hitam" class="footer-nav-link active-page">
+            <a href="produk-detail.html?id=g03" class="footer-nav-link active-page">
               <span>➔</span> Detail Model & Pemesanan WA
             </a>
           </nav>
@@ -626,7 +559,8 @@
     </svg>
   </a>
 
-  <!-- Script Core -->
+  <!-- Data Produk Terpusat & Script Core -->
+  <script src="products.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

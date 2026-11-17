@@ -15,3 +15,6 @@ $RECYCLE.BIN/
 *.log
 *.tmp
 *.bak
+
+# Raw DSLR/Kamera Arsip Lokal (Foto web yang sudah dioptimasi ada di assets/katalog/)
+foto produk/

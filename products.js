@@ -21,12 +21,12 @@ window.BALLQISH_PRODUCTS = [
     wholesalePrice: 65000,
     badge: "Pilihan Utama",
     rating: "4.9",
-    image: "/images/model-g38/G03.1.jpg",
+    image: "assets/katalog/G03/foto-1.jpg",
     gallery: [
-      { id: 1, src: "/images/model-g38/G03.1.jpg", alt: "Ballqish G03 - Foto 1" },
-      { id: 2, src: "/images/model-g38/G03.13.jpg", alt: "Ballqish G03 - Foto 2" },
-      { id: 3, src: "/images/model-g38/G03.14.jpg", alt: "Ballqish G03 - Foto 3" },
-      { id: 4, src: "/images/model-g38/G03.22.jpg", alt: "Ballqish G03 - Foto 4" }
+      { id: 1, src: "assets/katalog/G03/foto-1.jpg", alt: "Ballqish G03 - Foto 1" },
+      { id: 2, src: "assets/katalog/G03/foto-2.jpg", alt: "Ballqish G03 - Foto 2" },
+      { id: 3, src: "assets/katalog/G03/foto-3.jpg", alt: "Ballqish G03 - Foto 3" },
+      { id: 4, src: "assets/katalog/G03/foto-4.jpg", alt: "Ballqish G03 - Foto 4" }
     ],
     description: "Model pantofel Ballqish G03 buatan langsung pengrajin Desa Sruni, Gedangan, Sidoarjo. Dirancang nyaman dipakai kerja seharian dengan kulit sintetis PU Premium Grade A dan outsole elastis anti-slip yang fleksibel.",
     specs: [

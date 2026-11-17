@@ -8,26 +8,26 @@
 (function (global) {
   'use strict';
 
-  // Contoh / Default Array of Objects untuk Galeri Produk
+  // Default Array of Objects untuk Galeri Produk (mengarah langsung ke foto asli di assets/katalog/)
   const DEFAULT_GALLERY_IMAGES = [
     {
       id: 1,
-      src: '/images/model-g38/G03.1.jpg',
+      src: 'assets/katalog/G03/foto-1.jpg',
       alt: 'Ballqish G03 - Foto 1'
     },
     {
       id: 2,
-      src: '/images/model-g38/G03.13.jpg',
+      src: 'assets/katalog/G03/foto-2.jpg',
       alt: 'Ballqish G03 - Foto 2'
     },
     {
       id: 3,
-      src: '/images/model-g38/G03.14.jpg',
+      src: 'assets/katalog/G03/foto-3.jpg',
       alt: 'Ballqish G03 - Foto 3'
     },
     {
       id: 4,
-      src: '/images/model-g38/G03.22.jpg',
+      src: 'assets/katalog/G03/foto-4.jpg',
       alt: 'Ballqish G03 - Foto 4'
     }
   ];
